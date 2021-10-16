@@ -61,30 +61,30 @@ body {
 }
 
 #slider1 {
-    background-image: url(/cssMemSlider/assets/img/9sIEIojfdpw.jpg);
+    background-image: url(.assets/img/9sIEIojfdpw.jpg);
     background-size: cover
     ;
 }
 
 #slider2 {
-    background-image: url(/cssMemSlider/assets/img/9sIEIojfdpw.jpg;);
+    background-image: url(.assets/img/9sIEIojfdpw.jpg;);
     background-size: cover
 }
 
 #slider3 {
-    background-image: url(/cssMemSlider/assets/img/PYGca-_weV0.jpg);
+    background-image: url(.assets/img/PYGca-_weV0.jpg);
     background-size: cover
 
 }
 
 #slider4 {
-    background-image: url(/cssMemSlider/assets/img/dgfw-hydTT0.jpg);
+    background-image: url(.assets/img/dgfw-hydTT0.jpg);
     background-size: cover
 
 }
 
 #slider5 {
-    background-image: url(/cssMemSlider/assets/img/mMJSE1_LRvw.jpg);
+    background-image: url(.assets/img/mMJSE1_LRvw.jpg);
     background-size: cover
 }
 
