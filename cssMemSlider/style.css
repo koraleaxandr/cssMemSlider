@@ -1,0 +1,222 @@
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    max-height: 1080px;
+    margin: 0 auto;
+    background-color: rgb(8, 20, 20);
+}
+
+.css-slider {
+    width: 100%;
+    height: 100vh;
+    max-height: 1080px;
+   }
+
+.slider-pagination {
+    position: relative;
+    width: 20%;
+    min-width: 250px;
+    height: 50px;
+    margin: 0 0 auto auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 5%;
+   align-items: center;
+   justify-content: space-around;
+   z-index: 1;
+}
+
+.carusel-container {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.slider-window{
+    width: 500%;
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "1 2 3 4 5";    
+ 
+}
+
+.slider-container{
+    height: 55%;
+   
+}
+
+#check1:checked~.carusel-container .slider-window #slider1,
+#check2:checked~.carusel-container .slider-window #slider2,
+#check3:checked~.carusel-container .slider-window #slider3,
+#check4:checked~.carusel-container .slider-window #slider4,
+#check5:checked~.carusel-container .slider-window #slider5 {
+    transition: 1s;
+    grid-area: 1;
+}
+
+.slide-label {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top:-.5rem;
+    left: -0.5rem;
+    border-radius: 50%;
+    opacity: 0.;       
+    cursor: pointer;
+   z-index: 2;
+}
+
+.slider-img {
+    width:100%;
+    height: 90%;
+    transform: translateX(100%);
+    transition: all 0.5s;
+}
+
+/* ----------------------------------Когда-нибудь слайдер станет бесконечным-----*/
+
+/*.img-label-prev {
+    position: absolute;
+    left: 5px;
+    top: 40%;
+    width: 50px;
+    height: 50px;
+    font-size: 6rem;
+    font-weight: 900;
+    color: blueviolet;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.img-label-next {
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    width: 50px;
+    height: 50px;
+    font-size: 6rem;
+    font-weight: 900;
+    color: blueviolet;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.5;
+} */
+
+.img-label-next:hover,
+.img-label-prev:hover {
+    color: cornsilk;
+}
+
+input {
+    display: none;
+}
+
+#check1:checked~.carusel-container .slider-window #slider1 img,
+#check2:checked~.carusel-container .slider-window #slider2 img,
+#check3:checked~.carusel-container .slider-window #slider3 img,
+#check4:checked~.carusel-container .slider-window #slider4 img,
+#check5:checked~.carusel-container .slider-window #slider5 img {
+    transform: translateX(0%);
+}
+
+label:hover~button {
+    background-color: rgb(105, 37, 96);
+}
+
+label:active~button {
+    background-color: rgb(56, 107, 78);
+    border-color: cadetblue;
+}
+
+.label-span {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    align-self: center;
+    border:2px solid;
+    border-radius: 50%;
+    background-color: blue;
+    z-index: 0;
+    transition: all 0.8s;
+}
+
+#check1:checked~.slider-pagination #span1,
+#check2:checked~.slider-pagination #span2,
+#check3:checked~.slider-pagination #span3,
+#check4:checked~.slider-pagination #span4,
+#check5:checked~.slider-pagination #span5 {       
+    background:none ;
+    border-color:azure;
+}
+
+#check1:active ~.slider-pagination #span1,
+#check2:active~.slider-pagination #span2,
+#check3:active~.slider-pagination #span3,
+#check4:active~.slider-pagination #span4,
+#check5:active~.slider-pagination #span5 {
+    background: none;
+    border-color: rgb(199, 77, 40);
+}
+
+.speech-container {
+    height: auto;
+    width: 70%;
+    top:-5%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.speech-window {
+    height: 100%;
+    width: 500%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "1 2 3 4 5";
+    list-style: none;
+}
+
+.sppech {
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.sppech p {
+    font-size: 1.5em;
+    color: cornsilk;
+}
+
+#check1:checked~.speech-container .sppech:nth-child(1),
+#check2:checked~.speech-container .sppech:nth-child(2),
+#check3:checked~.speech-container .sppech:nth-child(3),
+#check4:checked~.speech-container .sppech:nth-child(4),
+#check5:checked~.speech-container .sppech:nth-child(5) {
+        grid-area: 1;
+        transform: translateY(0%);
+}
+@media only screen and (max-width: 900px) {
+    .carusel-container {       
+        height: 87vw;       
+    }
+
+    .slider-pagination {
+        margin: 0 auto;
+    }
+    
+    .slider-container {
+        height: 70%;
+    }
+
+    .speech-container {        
+        top: 0%;       
+    }
+}
