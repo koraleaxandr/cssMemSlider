@@ -26,7 +26,8 @@ body {
     min-width: 250px;
     height: 50px;
     margin: 0 0 auto auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
    align-items: center;
    justify-content: space-around;
    z-index: 1;
@@ -62,10 +63,10 @@ body {
 }
 
 .slide-label {
-    width: 60px;
-    height: 60px;
-    opacity: 0.5;
-    border-radius: 50%;    
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    opacity: 0.;       
     cursor: pointer;
    z-index: 2;
 }
@@ -101,7 +102,7 @@ button:active {
 .label-span {
     width: 25px;
     height: 25px;
-    left: -10%;
+    align-self: center;
     border:2px solid;
     border-radius: 50%;
     background-color: blue;
@@ -133,6 +134,11 @@ button:active {
     list-style: none;
 }
 
+.sppech {
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
 .sppech p {
     font-size: 1.5em;
     color: cornsilk;
@@ -143,8 +149,8 @@ button:active {
 #check3:checked~.speech-container .sppech:nth-child(3),
 #check4:checked~.speech-container .sppech:nth-child(4),
 #check5:checked~.speech-container .sppech:nth-child(5) {
-    transition: 1s;
-    grid-area: 1;
+        grid-area: 1;
+        transform: translateY(0%);
 }
 @media only screen and (max-width: 900px) {
     .carusel-container {       
