@@ -78,6 +78,41 @@ body {
     transition: all 0.5s;
 }
 
+/* ----------------------------------Когда-нибудь слайдер станет бесконечным-----*/
+
+/*.img-label-prev {
+    position: absolute;
+    left: 5px;
+    top: 40%;
+    width: 50px;
+    height: 50px;
+    font-size: 6rem;
+    font-weight: 900;
+    color: blueviolet;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.img-label-next {
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    width: 50px;
+    height: 50px;
+    font-size: 6rem;
+    font-weight: 900;
+    color: blueviolet;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.5;
+} */
+
+.img-label-next:hover,
+.img-label-prev:hover {
+    color: cornsilk;
+}
+
 input {
     display: none;
 }
@@ -94,9 +129,9 @@ label:hover~button {
     background-color: rgb(105, 37, 96);
 }
 
-button:active {
-    transform: translateY(1px);
-    filter: saturate(150%);
+label:active~button {
+    transform: translate(5px);
+    background-color: darkgrey;
 }
 
 .label-span {
@@ -121,6 +156,7 @@ button:active {
 .speech-container {
     height: auto;
     width: 70%;
+    top:-5%;
     display: inline-block;
     overflow: hidden;
 }
