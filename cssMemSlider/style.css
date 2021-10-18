@@ -200,4 +200,8 @@ label:active~button {
     .slider-container {
         height: 70%;
     }
+
+    .speech-container {        
+        top: 0%;       
+    }
 }
